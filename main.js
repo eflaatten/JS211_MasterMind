@@ -40,9 +40,12 @@ const generateHint = (guess) =>  {
 }
 
 const mastermind = (guess) => {
-  //solution = 'abcd'; // Comment this out to generate a random solution
+  solution = 'abcd'; // Comment this out to generate a random solution
   // your code here
   if (guess === solution) {
+    setTimeout(() => {
+      rl.close()
+    }, 100);
     console.log('You guessed it!')
     return 'You guessed it!'
   } else {
